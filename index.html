@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Spendara — Personal Finance & Expense Tracker App" />
+  <title>Privacy Policy — Spendara</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:     #6C63FF;
+      --primary-light: #EEEDFE;
+      --income:      #1D9E75;
+      --text-primary:   #1A1A2E;
+      --text-secondary: #6B6B80;
+      --text-hint:      #AEAEB8;
+      --bg:          #F8F7FF;
+      --surface:     #FFFFFF;
+      --border:      #E0DED8;
+      --radius:      12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary:   #F0EFF8;
+        --text-secondary: #9898B0;
+        --text-hint:      #5F5E6A;
+        --bg:          #0F0F1A;
+        --surface:     #1A1A2E;
+        --border:      #2E2E45;
+        --primary-light: #1E1B3A;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ──────────────────────────────────────────── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #6C63FF, #4A43D4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    .logo-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+    .badge {
+      font-size: 12px;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #6C63FF 0%, #4A43D4 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
+      max-width: 480px;
+      margin: 0 auto 24px;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+    }
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .hero-meta .dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+
+    /* ── TRUST STRIP ──────────────────────────────────────── */
+    .trust-strip {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    .trust-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .trust-item .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .icon-green  { background: #E1F5EE; }
+    .icon-blue   { background: var(--primary-light); }
+    .icon-yellow { background: #FAEEDA; }
+
+    /* ── MAIN CONTENT ─────────────────────────────────────── */
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── TOC ──────────────────────────────────────────────── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    @media (max-width: 500px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+    .toc li { font-size: 14px; }
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .toc a:hover { text-decoration: underline; }
+
+    /* ── SECTIONS ─────────────────────────────────────────── */
+    .section {
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+    .section p {
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── INFO CARDS ───────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .card-green {
+      background: #E1F5EE;
+      border-color: #1D9E7530;
+    }
+    .card-purple {
+      background: var(--primary-light);
+      border-color: #6C63FF30;
+    }
+    .card-amber {
+      background: #FAEEDA;
+      border-color: #BA751730;
+    }
+    @media (prefers-color-scheme: dark) {
+      .card-green  { background: #0A2E1F; border-color: #1D9E7540; }
+      .card-purple { background: #1E1B3A; border-color: #6C63FF40; }
+      .card-amber  { background: #2A1F06; border-color: #BA751740; }
+    }
+    .card p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ── HIGHLIGHT BOX (the "no data" callout) ────────────── */
+    .highlight {
+      background: linear-gradient(135deg, #6C63FF10, #4A43D410);
+      border: 1.5px solid #6C63FF30;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .highlight strong {
+      display: block;
+      font-size: 15px;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .highlight p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ── LISTS ────────────────────────────────────────────── */
+    .list {
+      list-style: none;
+      margin: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    .list li::before {
+      content: '✓';
+      width: 20px;
+      height: 20px;
+      background: #E1F5EE;
+      color: #1D9E75;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .list-dot li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+      margin-top: 8px;
+    }
+
+    /* ── TABLE ────────────────────────────────────────────── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    td {
+      padding: 12px 16px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+    tr:first-child td { border-top: none; }
+
+    /* ── DIVIDER ──────────────────────────────────────────── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── CONTACT CARD ─────────────────────────────────────── */
+    .contact-card {
+      background: linear-gradient(135deg, #6C63FF, #4A43D4);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .contact-card h2 {
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: background 0.2s;
+    }
+    .contact-email:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .footer-tagline {
+      font-size: 13px;
+      color: var(--text-hint);
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-hint);
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 36px; }
+      .content { padding: 32px 16px 60px; }
+      .contact-card { padding: 28px 20px; }
+      .trust-inner { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ──────────────────────────────────────────────── -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      </div>
+      <span class="logo-name">Spendara</span>
+    </a>
+    <span class="badge">Privacy Policy</span>
+  </div>
+</header>
+
+<!-- ── HERO ────────────────────────────────────────────────── -->
+<div class="hero">
+  <h1>Privacy Policy</h1>
+  <p>We built Spendara with privacy as a first principle. Your financial data never leaves your device.</p>
+  <div class="hero-meta">
+    <span>Effective: June 1, 2025</span>
+    <span class="dot"></span>
+    <span>Last updated: June 1, 2025</span>
+    <span class="dot"></span>
+    <span>App: Spendara v1.0</span>
+  </div>
+</div>
+
+<!-- ── TRUST STRIP ──────────────────────────────────────────── -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="icon icon-green">🔒</div>
+      No account required
+    </div>
+    <div class="trust-item">
+      <div class="icon icon-blue">📱</div>
+      Data stays on your phone
+    </div>
+    <div class="trust-item">
+      <div class="icon icon-yellow">🚫</div>
+      Never sold to third parties
+    </div>
+    <div class="trust-item">
+      <div class="icon icon-green">🌐</div>
+      Works fully offline
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ─────────────────────────────────────────── -->
+<div class="content">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#data-collected">Data We Collect</a></li>
+      <li><a href="#data-not-collected">Data We Do NOT Collect</a></li>
+      <li><a href="#local-storage">Local Storage</a></li>
+      <li><a href="#admob">Advertising (AdMob)</a></li>
+      <li><a href="#crash">Crash & Analytics</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <div class="section" id="overview">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Overview</h2>
+    </div>
+    <p>Spendara ("we", "our", or "the app") is a personal finance companion app developed by Dnyanesh K, an independent developer based in India. This Privacy Policy explains what information is collected, how it is used, and the choices you have.</p>
+    <p>By downloading and using Spendara, you agree to the practices described in this policy. If you do not agree, please uninstall the app.</p>
+
+    <div class="highlight">
+      <strong>The short version</strong>
+      <p>Your transactions, goals, and financial data are stored only on your device using local storage. We cannot see them, access them, or share them. The only data that ever leaves your device is anonymous crash reports and advertising identifiers managed by Google — both of which you can opt out of.</p>
+    </div>
+  </div>
+
+  <!-- 2. DATA WE COLLECT -->
+  <div class="section" id="data-collected">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Data We Collect</h2>
+    </div>
+    <p>Spendara collects a minimal amount of data. The table below explains each type clearly.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data type</th>
+            <th>Where it's stored</th>
+            <th>Who can access it</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Name</strong> (entered at onboarding)</td>
+            <td>Your device only</td>
+            <td>Only you</td>
+            <td>Personalise dashboard greeting</td>
+          </tr>
+          <tr>
+            <td><strong>Email address</strong> (entered at onboarding)</td>
+            <td>Your device only</td>
+            <td>Only you</td>
+            <td>Profile screen display only</td>
+          </tr>
+          <tr>
+            <td><strong>Transaction records</strong></td>
+            <td>Your device only</td>
+            <td>Only you</td>
+            <td>Core app functionality</td>
+          </tr>
+          <tr>
+            <td><strong>Savings goals</strong></td>
+            <td>Your device only</td>
+            <td>Only you</td>
+            <td>Goal tracking functionality</td>
+          </tr>
+          <tr>
+            <td><strong>Crash reports</strong></td>
+            <td>Google servers (anonymous)</td>
+            <td>Developer only</td>
+            <td>Fix bugs and improve stability</td>
+          </tr>
+          <tr>
+            <td><strong>Ad identifier (GAID)</strong></td>
+            <td>Google servers</td>
+            <td>Google AdMob</td>
+            <td>Show relevant advertisements</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3. DATA WE DO NOT COLLECT -->
+  <div class="section" id="data-not-collected">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Data We Do NOT Collect</h2>
+    </div>
+    <p>We want to be explicit about what Spendara never collects or transmits:</p>
+
+    <div class="card card-green">
+      <ul class="list">
+        <li>Bank account numbers, UPI IDs, card numbers, or any payment credentials</li>
+        <li>Your contacts, SMS messages, or call logs</li>
+        <li>Your location (GPS or IP-based)</li>
+        <li>Your camera, microphone, or photos</li>
+        <li>Your transaction amounts, categories, or financial history</li>
+        <li>Your device files or storage contents</li>
+        <li>Your browsing history or other app usage</li>
+        <li>Any biometric data</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:16px;">Spendara does not require an internet connection to function. All core features — adding transactions, viewing insights, managing goals — work completely offline.</p>
+  </div>
+
+  <!-- 4. LOCAL STORAGE -->
+  <div class="section" id="local-storage">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Local Data Storage</h2>
+    </div>
+    <p>All your personal and financial data is stored locally on your Android device using <strong>Hive</strong>, a fast and lightweight local database. This data includes:</p>
+
+    <ul class="list list-dot">
+      <li>Your name and email address entered during onboarding</li>
+      <li>All transaction records you create (amount, type, category, date, notes)</li>
+      <li>All savings goals and deposit history</li>
+      <li>Your in-app preferences (language, theme)</li>
+    </ul>
+
+    <div class="card card-purple" style="margin-top:16px;">
+      <p><strong>🔐 Important:</strong> This data never leaves your phone. We have no server, no database, and no ability to access your financial information. If you uninstall the app, all locally stored data is permanently deleted from your device.</p>
+    </div>
+
+    <p style="margin-top: 16px;">If you use Android's built-in backup feature, your app data may be included in your Google account backup according to Google's own privacy policy. You can disable app backup in your Android settings.</p>
+  </div>
+
+  <!-- 5. ADMOB -->
+  <div class="section" id="admob">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>Advertising — Google AdMob</h2>
+    </div>
+    <p>Spendara uses <strong>Google AdMob</strong> to display banner advertisements. AdMob helps keep the app free for all users.</p>
+
+    <p>By using Spendara, you may be shown ads personalised to your interests by Google. AdMob may collect and use the following to deliver ads:</p>
+
+    <ul class="list list-dot">
+      <li>Google Advertising ID (GAID) — a resettable anonymous identifier</li>
+      <li>General device information (model, OS version)</li>
+      <li>Coarse IP-based location (country/region level only)</li>
+      <li>Ad interaction data (impressions, clicks)</li>
+    </ul>
+
+    <div class="card card-amber" style="margin-top:16px;">
+      <p><strong>⚡ Rewarded Ads:</strong> Spendara offers an optional "Remove Ads for 1 hour" feature. When you watch a rewarded ad voluntarily, the timestamp of your ad-free window is stored locally on your device only — never on any server.</p>
+    </div>
+
+    <p style="margin-top:16px;">Google's data practices for AdMob are governed by Google's Privacy Policy. You can review it at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--primary)">policies.google.com/privacy</a>.</p>
+
+    <p><strong>To opt out of personalised ads:</strong></p>
+    <ul class="list list-dot">
+      <li>On your Android device, go to Settings → Google → Ads</li>
+      <li>Enable "Opt out of Ads Personalisation"</li>
+      <li>Or reset your Advertising ID from the same screen</li>
+    </ul>
+  </div>
+
+  <!-- 6. CRASH & ANALYTICS -->
+  <div class="section" id="crash">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Crash Reports &amp; Analytics</h2>
+    </div>
+    <p>Spendara uses crash reporting to identify and fix technical issues. When the app crashes or encounters an error, an anonymous report is sent that may include:</p>
+
+    <ul class="list list-dot">
+      <li>The type of error and which part of the app caused it</li>
+      <li>Your device model and Android version</li>
+      <li>App version number</li>
+      <li>Time and date of the crash</li>
+    </ul>
+
+    <div class="card card-green" style="margin-top:12px;">
+      <p><strong>What crash reports never include:</strong> Your name, email, transaction data, financial information, or any personally identifiable content. Crash data is entirely anonymous and used solely to improve app stability.</p>
+    </div>
+  </div>
+
+  <!-- 7. CHILDREN -->
+  <div class="section" id="children">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Children's Privacy</h2>
+    </div>
+    <p>Spendara is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13 years of age.</p>
+    <p>If you are a parent or guardian and believe your child has provided personal information through our app, please contact us at <a href="mailto:dnyanesh.k2002@gmail.com" style="color:var(--primary)">dnyanesh.k2002@gmail.com</a> and we will promptly delete such information.</p>
+  </div>
+
+  <!-- 8. YOUR RIGHTS -->
+  <div class="section" id="your-rights">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Your Rights &amp; Choices</h2>
+    </div>
+    <p>As a user of Spendara, you have full control over your data:</p>
+
+    <ul class="list">
+      <li><strong>Access your data:</strong> All your data is visible within the app at all times — transactions, goals, and profile information.</li>
+      <li><strong>Edit your data:</strong> You can edit or update any transaction, goal, or profile information directly in the app.</li>
+      <li><strong>Delete your data:</strong> You can delete individual transactions, goals, or your entire profile from within the app. Uninstalling the app permanently deletes all locally stored data.</li>
+      <li><strong>Opt out of personalised ads:</strong> Follow the steps in Section 5 to reset or disable your advertising identifier.</li>
+      <li><strong>Data portability:</strong> Your data is stored in a local Hive database on your device. You own it entirely.</li>
+    </ul>
+
+    <p style="margin-top:16px;">Since all personal financial data is stored only on your device, we technically cannot access, export, or delete it on your behalf — you have complete control through the app itself.</p>
+  </div>
+
+  <!-- 9. CHANGES -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Changes to This Policy</h2>
+    </div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the app, legal requirements, or our practices. When we do:</p>
+
+    <ul class="list list-dot">
+      <li>We will update the "Last updated" date at the top of this page</li>
+      <li>For significant changes, we will notify users through an in-app notice or update release notes on the Play Store</li>
+      <li>Continued use of the app after changes are posted constitutes acceptance of the updated policy</li>
+    </ul>
+
+    <p style="margin-top:12px;">We encourage you to review this page periodically. This policy is governed by the laws of India.</p>
+  </div>
+
+  <hr />
+
+  <!-- CONTACT -->
+  <div id="contact" class="contact-card">
+    <h2>Have a question about privacy?</h2>
+    <p>We're happy to answer any questions about how Spendara handles your data. Expect a response within 48 hours.</p>
+    <a href="mailto:dnyanesh.k2002@gmail.com" class="contact-email">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      dnyanesh.k2002@gmail.com
+    </a>
+    <p style="margin-top:16px; font-size:13px; color:rgba(255,255,255,0.6);">
+      Developer: Dnyanesh K &nbsp;·&nbsp; India &nbsp;·&nbsp; Spendara v1.0
+    </p>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Spendara</div>
+    <div class="footer-tagline">Personal Finance Companion · Free · Private · Offline</div>
+    <div class="footer-links">
+      <a href="#overview">Overview</a>
+      <a href="#data-collected">Data Collected</a>
+      <a href="#admob">Advertising</a>
+      <a href="#your-rights">Your Rights</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 Dnyanesh K. All rights reserved. · Governed by laws of India.</div>
+  </div>
+</footer>
+
+</body>
+</html>
